@@ -3,6 +3,10 @@
     "arff-files": {
       "baseline": "1.1.0",
       "port-version": 0
+    },
+    "fimdlp": {
+      "baseline": "2.0.0",
+      "port-version": 0
     }
   }
 }

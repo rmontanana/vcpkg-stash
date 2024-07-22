@@ -1,6 +1,6 @@
 {
   "name": "fimdlp",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "C++ Discretizer based on Fayyad-Irani Minimum Description Length algorithm. Includes a basic KBinsDiscretizer.",
   "homepage": "https://github.com/rmontanana/mdlp",
   "license": "MIT",

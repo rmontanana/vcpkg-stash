@@ -3,8 +3,10 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO rmontanana/mdlp
-    REF 248a511972f0e33be19cfe2d7bacf18521332b2a
-    SHA512 44fe56788f4740a8d9dc403fae6cb79857782dcd89380e49c93840a7adead8cdb471681ce0a41e22f7f612c33425164b07b5366a90ecb981e5ccde142c31e030
+    REF "v${VERSION}"
+    #REF ab1262200924a6b79e6330574b52da59e3471fa1
+    #SHA512 eac542cd8e28111e30587af8d7923426525121799adb5108d821bf2dcc8eea0cb325a306b256945e3a5dc79726ab2ebaafef7d99760efe5b9ba28d1f213963a9
+    SHA512 6f81930c950a444c15cb439fa100eb0e34922e2304e25427d79db1884298f7fdebecf317173e7f9f75d7c486f5b9d6b7879db25c3e1d14fb9ffd370bdec1eb59
     HEAD_REF main
 )
 
@@ -12,15 +14,13 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
-
-vcpkg_cmake_build()
+set(VCPKG_BUILD_TYPE release)
+set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)
+vcpkg_cmake_install()
 
 #vcpkg_cmake_config_fixup(PACKAGE_NAME "fimdlp")
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/tests/lib")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
 file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
-file(INSTALL "${SOURCE_PATH}/src/Discretizer.h" DESTINATION "${CURRENT_PACKAGES_DIR}/include/fimdlp")
-file(INSTALL "${SOURCE_PATH}/src/CPPFImdlp.h" DESTINATION "${CURRENT_PACKAGES_DIR}/include/fimdlp")
-file(INSTALL "${SOURCE_PATH}/src/BinDisc.h" DESTINATION "${CURRENT_PACKAGES_DIR}/include/fimdlp")
 configure_file("${CMAKE_CURRENT_LIST_DIR}/usage" "${CURRENT_PACKAGES_DIR}/share/${PORT}/usage" COPYONLY)

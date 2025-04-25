@@ -13,6 +13,9 @@
       "name": "vcpkg-cmake-config",
       "host": true
     },
-    "libtorch"
+    {
+      "name": "libtorch",
+      "version>=": "2.1.2"
+    }
   ]
 }

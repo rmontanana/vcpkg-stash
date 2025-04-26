@@ -25,6 +25,7 @@ vcpkg_extract_source_archive_ex(
 # Copy everything into the package area
 file(INSTALL "${SOURCE_PATH}/include" DESTINATION "${CURRENT_PACKAGES_DIR}")
 file(INSTALL "${SOURCE_PATH}/lib"     DESTINATION "${CURRENT_PACKAGES_DIR}/lib")
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/Torch)
+file(INSTALL "${SOURCE_PATH}/share"   DESTINATION "${CURRENT_PACKAGES_DIR}/share" OPTIONAL)
+file(INSTALL "${SOURCE_PATH}/cmake"   DESTINATION "${CURRENT_PACKAGES_DIR}/cmake" OPTIONAL)
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")

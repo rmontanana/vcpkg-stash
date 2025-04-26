@@ -17,3 +17,11 @@ overwrite:
 baseline:
 	@echo "Showing repository baseline"
 	@git rev-parse HEAD
+
+update-readme-baseline:
+	@echo "🔎 Finding new baseline SHA..."
+	@NEW_BASELINE=$$(git rev-parse HEAD) && \
+	echo "✍️  Updating README.md with baseline $$NEW_BASELINE..." && \
+	sed -i.bak -E "s/(\"baseline\": \")[a-f0-9]{40}(\")/\1$${NEW_BASELINE}\2/" README.md && \
+	rm -f README.md.bak && \
+	echo "✅ README.md updated with new baseline: $$NEW_BASELINE"

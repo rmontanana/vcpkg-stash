@@ -4,7 +4,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO doctorado-ml/bayesnet
     REF "v${VERSION}"
-    SHA512 6f81930c950a444c15cb439fa100eb0e34922e2304e25427d79db1884298f7fdebecf317173e7f9f75d7c486f5b9d6b7879db25c3e1d14fb9ffd370bdec1eb59
+    SHA512 25a723a5f83184b78cdb5f8dd7de84ae91c37b54c04dd44d259ceac0cb1a290dbab04add6902eca6cb826302d3259d5e3a06c1e53cba1b0f7523802ad29ce0ba
     HEAD_REF main
 )
 

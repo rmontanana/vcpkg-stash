@@ -8,9 +8,9 @@ This repository provides prebuilt or custom libraries for projects that use **vc
 
 ## 📁 Libraries Included
 
-- `arff-files`  — A C++ library to read ARFF datasets.
-- `fimdlp`      — A C++ library with Discretization algorithm based on the paper by Fayyad & Irani and some binning discretization algorithms (depends on `arff-files`).
-- `libtorch-bin` — Pre-built binaries of **LibTorch** (PyTorch C++ API) for:
+- `arff-files`  — A C++ library to read ARFF datasets (https://gitea.rmontanana.es/rmontanana/ArffFiles).
+- `fimdlp`      — A C++ library with Discretization algorithm based on the paper by Fayyad & Irani and some binning discretization algorithms (depends on `arff-files`). (https://gitea.rmontanana.es/rmontanana/mdlp).
+- `libtorch-bin` — Pre-built binaries of **LibTorch** (PyTorch C++ API) (https://pytorch.org/) for:
   - Linux x86-64 (CPU)
   - macOS ARM64 (Apple Silicon)
 
@@ -28,7 +28,7 @@ This repository provides prebuilt or custom libraries for projects that use **vc
     {
       "kind": "git",
       "repository": "https://github.com/rmontanana/vcpkg-stash",
-      "baseline": "2f70ad49c897e467eb3e5b7c1bab08404703bfce",
+      "baseline": "a9ddc0cb6c9798b4f823979a2722be8b907acd44",
       "packages": [
         "arff-files",
         "fimdlp",
@@ -56,13 +56,14 @@ vcpkg install
 ### 4. In your CMake project, link libraries as usual, e.g.:
 
 ```cmake
-find_package(libtorch-bin CONFIG REQUIRED)
+find_package(Torch CONFIG REQUIRED)
 find_package(fimdlp CONFIG REQUIRED)
-find_package(arff-files CONFIG REQUIRED)
+find_path(ARFF_FILES_INCLUDE_DIRS "ArffFiles/ArffFiles.hpp" REQUIRED)
+include_directories(${TORCH_INCLUDE_DIRS} ${ARFF_FILES_INCLUDE_DIRS} ${fimdlp_INCLUDE_DIRS})
 
 add_executable(myapp main.cpp)
 
-target_link_libraries(myapp PRIVATE fimdlp arff-files torch)
+target_link_libraries(myapp PRIVATE ${TORCH_LIBRARIES} fimdlp::fimdlp)
 ```
 
 

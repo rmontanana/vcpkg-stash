@@ -1,4 +1,4 @@
-.PHONY: update overwrite
+.PHONY: update overwrite baseline
 
 
 update:
@@ -14,3 +14,6 @@ overwrite:
 	@vcpkg --x-builtin-ports-root=./ports \
       --x-builtin-registry-versions-dir=./versions \
       x-add-version --all --verbose --overwrite-version
+baseline:
+	@echo "Showing repository baseline"
+	@git rev-parse HEAD

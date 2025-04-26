@@ -8,8 +8,8 @@ This repository provides prebuilt or custom libraries for projects that use **vc
 
 ## 📁 Libraries Included
 
-- `arff-files`  — A C++ library to read/write ARFF datasets.
-- `fimdlp`      — A C++ library with Machine Learning utilities (depends on `arff-files`).
+- `arff-files`  — A C++ library to read ARFF datasets.
+- `fimdlp`      — A C++ library with Discretization algorithm based on the paper by Fayyad & Irani and some binning discretization algorithms (depends on `arff-files`).
 - `libtorch-bin` — Pre-built binaries of **LibTorch** (PyTorch C++ API) for:
   - Linux x86-64 (CPU)
   - macOS ARM64 (Apple Silicon)
@@ -18,9 +18,9 @@ This repository provides prebuilt or custom libraries for projects that use **vc
 
 ## 🔗 How to Configure Your Project to Use This Registry
 
-1. Ensure you are using a recent version of **vcpkg** (>=2024.01.10).
+### 1. Ensure you are using a recent version of **vcpkg** (>=2024.01.10).
 
-2. In your project, create (or edit) a file named **`vcpkg-configuration.json`** at the project root:
+### 2. In your project, create (or edit) a file named **`vcpkg-configuration.json`** at the project root:
 
 ```json
 {
@@ -47,13 +47,13 @@ This repository provides prebuilt or custom libraries for projects that use **vc
 - Replace the Microsoft baseline if needed to match your local vcpkg clone.
 - This setup tells vcpkg to fetch `arff-files`, `fimdlp`, and `libtorch-bin` from **vcpkg-stash**, and everything else from the official **microsoft/vcpkg** registry.
 
-3. Install dependencies normally:
+### 3. Install dependencies normally:
 
 ```bash
 vcpkg install
 ```
 
-4. In your CMake project, link libraries as usual, e.g.:
+### 4. In your CMake project, link libraries as usual, e.g.:
 
 ```cmake
 find_package(libtorch-bin CONFIG REQUIRED)

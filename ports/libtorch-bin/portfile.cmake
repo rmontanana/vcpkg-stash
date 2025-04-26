@@ -34,7 +34,3 @@ endif()
 if(EXISTS "${SOURCE_PATH}/cmake")
     file(INSTALL "${SOURCE_PATH}/cmake" DESTINATION "${CURRENT_PACKAGES_DIR}/cmake")
 endif()
-
-# Manually install LICENSE into the share folder
-file(MAKE_DIRECTORY "${CURRENT_PACKAGES_DIR}/share/${PORT}")
-file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME "copyright")

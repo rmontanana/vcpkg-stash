@@ -22,10 +22,19 @@ vcpkg_extract_source_archive_ex(
     ARCHIVE "${ARCHIVE}"
 )
 
-# Copy everything into the package area
-file(INSTALL "${SOURCE_PATH}/include" DESTINATION "${CURRENT_PACKAGES_DIR}")
-file(INSTALL "${SOURCE_PATH}/lib"     DESTINATION "${CURRENT_PACKAGES_DIR}/lib")
-file(INSTALL "${SOURCE_PATH}/share"   DESTINATION "${CURRENT_PACKAGES_DIR}/share" OPTIONAL)
-file(INSTALL "${SOURCE_PATH}/cmake"   DESTINATION "${CURRENT_PACKAGES_DIR}/cmake" OPTIONAL)
+# Install headers and libraries manually
+file(INSTALL "${SOURCE_PATH}/include" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
+file(INSTALL "${SOURCE_PATH}/lib" DESTINATION "${CURRENT_PACKAGES_DIR}/lib")
 
-vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
+# Optionally install shared resources if they exist
+if(EXISTS "${SOURCE_PATH}/share")
+    file(INSTALL "${SOURCE_PATH}/share" DESTINATION "${CURRENT_PACKAGES_DIR}/share")
+endif()
+
+if(EXISTS "${SOURCE_PATH}/cmake")
+    file(INSTALL "${SOURCE_PATH}/cmake" DESTINATION "${CURRENT_PACKAGES_DIR}/cmake")
+endif()
+
+# Manually install LICENSE into the share folder
+file(MAKE_DIRECTORY "${CURRENT_PACKAGES_DIR}/share/${PORT}")
+file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME "copyright")

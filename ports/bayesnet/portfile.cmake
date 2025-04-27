@@ -6,6 +6,7 @@ vcpkg_from_github(
     REF "v${VERSION}"
     SHA512 9363c35d6d37e30a5c0a20860e6b6ab12890dacf7839da9cd2e436878bb682e531d7a4b63b7e39ad5a19e52f3b501caa2f787ffee42713eddb2fc151d2d611c8
     HEAD_REF main
+    GITHUB_HOST https://gitea.rmontanana.es
 )
 
 

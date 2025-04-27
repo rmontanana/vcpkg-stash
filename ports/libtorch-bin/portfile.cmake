@@ -20,7 +20,6 @@ vcpkg_download_distfile(
 vcpkg_extract_source_archive(
     SOURCE_PATH
     ARCHIVE "${ARCHIVE}"
-    NO_REMOVE_ONE_LEVEL
 )
 
 # Install headers and libraries manually

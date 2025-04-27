@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# Create the imported interface target
+add_library(folding::folding INTERFACE IMPORTED)
+
+# Calculate the package root (this is where share/folding is located)
+get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
+
+# Tell the target where the headers are
+set_target_properties(folding::folding PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${PACKAGE_PREFIX_DIR}/include"
+)

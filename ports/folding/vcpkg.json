@@ -1,8 +1,8 @@
 {
-  "name": "arff-files",
-  "version": "1.1.0",
-  "description": "C++ library to Read Arff files",
-  "homepage": "https://github.com/rmontanana/ArffFiles",
+  "name": "folding",
+  "version": "1.1.1",
+  "description": "C++ library for K-Fold and stratified K-Fold header-only library.",
+  "homepage": "https://github.com/rmontanana/Folding",
   "license": "MIT",
   "dependencies": [
     {

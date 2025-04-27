@@ -1,5 +1,3 @@
-@PACKAGE_INIT@
-
 include(CMakeFindDependencyMacro)
 
 # Create the imported interface target

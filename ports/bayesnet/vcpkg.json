@@ -6,20 +6,20 @@
   "license": "MIT",
   "dependencies": [
     {
-      "name": "libtorch-bin",
-      "version>=": "2.7.0"
-    },
-    {
-      "name": "nlohmann-json",
-      "version>=": "3.11.3"
+      "name": "fimdlp",
+      "version>=": "2.0.1"
     },
     {
       "name": "folding",
       "version>=": "1.1.1"
     },
     {
-      "name": "fimdlp",
-      "version>=": "2.0.1"
+      "name": "libtorch-bin",
+      "version>=": "2.7.0"
+    },
+    {
+      "name": "nlohmann-json",
+      "version>=": "3.11.3"
     },
     {
       "name": "vcpkg-cmake",

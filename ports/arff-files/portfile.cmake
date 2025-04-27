@@ -9,5 +9,9 @@ vcpkg_from_github(
 # This is a header only library
 file(INSTALL "${SOURCE_PATH}/ArffFiles.hpp" DESTINATION "${CURRENT_PACKAGES_DIR}/include/ArffFiles")
 
+file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/arff-files-config.cmake"
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/arff-files"
+)
+
 # Handle copyright
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")

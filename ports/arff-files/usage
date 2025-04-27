@@ -1,0 +1,5 @@
+# arff-files is a header-only library.
+# To use it, simply link against arff-files::arff-files
+
+find_package(arff-files CONFIG REQUIRED)
+target_link_libraries(your_target PRIVATE arff-files::arff-files)

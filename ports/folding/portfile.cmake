@@ -16,7 +16,3 @@ file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/folding-config.cmake"
 
 # Handle copyright
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
-
-vcpkg_install_cmake_config(
-    NAMESPACE folding
-)

@@ -9,7 +9,8 @@ This repository provides prebuilt or custom libraries for projects that use **vc
 ## 📁 Libraries Included
 
 - `BayesNet`    — A C++ library for Bayesian networks (https://gitea.rmontanana.es/rmontanana/bayesnet).
-- `arff-files`  — A C++ 1library to read ARFF datasets (https://gitea.rmontanana.es/rmontanana/ArffFiles).
+- `folding`     — A C++ library for folding datasets (https://gitea.rmontanana.es/rmontanana/folding).
+- `arff-files`  — A C++ library to read ARFF datasets (https://gitea.rmontanana.es/rmontanana/ArffFiles).
 - `fimdlp`      — A C++ library with Discretization algorithm based on the paper by Fayyad & Irani and some binning discretization algorithms (depends on `arff-files`). (https://gitea.rmontanana.es/rmontanana/mdlp).
 - `libtorch-bin` — Pre-built binaries of **LibTorch** (PyTorch C++ API) (https://pytorch.org/) for:
   - Linux x86-64 (CPU)

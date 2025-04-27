@@ -1,0 +1,5 @@
+# folding is a header-only library.
+# To use it, simply link against folding::folding
+
+find_package(folding CONFIG REQUIRED)
+target_link_libraries(your_target PRIVATE folding::folding)

@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO rmontanana/folding
     REF "v${VERSION}"
-    SHA512 1fb488b3a258b13fa88932c9939e1b3220efea0b57eeb1fdd1fbde8ae7240410faf37fcf487151f81bdf447b7bcbf50b04ee80b34ee6d427816d1a87dde10bba
+    SHA512 0c86f58e0cb66349bb4e141e3e32a205a264daef6ffbd6284f76a2bb4deb303f752eb85954cd78082900a356da1940e1cf74c9732752b208f5dbf36f28ecfd2e
     HEAD_REF main
 )
 

@@ -12,7 +12,7 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
-set(VCPKG_BUILD_TYPE release)
+set(VCPKG_BUILD_TYPE Release)
 set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)
 vcpkg_cmake_install()
 

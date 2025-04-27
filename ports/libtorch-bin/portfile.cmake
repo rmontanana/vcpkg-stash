@@ -11,6 +11,8 @@ else()
     message(FATAL_ERROR "${PORT} does not provide binaries for this triplet")
 endif()
 
+set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)
+
 vcpkg_download_distfile(
     ARCHIVE
     URLS ${ARCHIVE_URL}

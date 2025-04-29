@@ -30,7 +30,7 @@ This repository provides prebuilt or custom libraries for projects that use **vc
     {
       "kind": "git",
       "repository": "https://github.com/rmontanana/vcpkg-stash",
-      "baseline": "ccecc89b1e5770dbbbe32ceb8ddeff2514c36a1f",
+      "baseline": "6ac9e3eb4858451338ec0e8d0929b034b3530846",
       "packages": [
         "arff-files",
         "fimdlp",

@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO rmontanana/folding
     REF "v${VERSION}"
-    SHA512 0c86f58e0cb66349bb4e141e3e32a205a264daef6ffbd6284f76a2bb4deb303f752eb85954cd78082900a356da1940e1cf74c9732752b208f5dbf36f28ecfd2e
+    SHA512 6220851b844ede5874cc6ca1dd384ff90006c2048313b89d521b50155212997e8bf02e6046ab63774786f6c471ecd07c5639ddfd4ce2f1b55ac96408d50aad4c
     HEAD_REF main
     GITHUB_HOST https://gitea.rmontanana.es
 )

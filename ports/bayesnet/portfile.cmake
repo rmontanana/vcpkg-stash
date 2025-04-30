@@ -4,7 +4,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO rmontanana/bayesnet_vcpkg
     REF "v${VERSION}"
-    SHA512 0
+    SHA512 668243bb0f15bb0fc8fe1bcd9d6f98e19d612937002217d4641324a2afc74c60b6dbb7a6a424d8d19f997965229b34f37556da518bf2577ab3d3f2ecf351daa6
     HEAD_REF main
     GITHUB_HOST https://gitea.rmontanana.es
 )

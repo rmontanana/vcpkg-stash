@@ -16,7 +16,7 @@ vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
 set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)
-vcpkg_cmake_install()
+vcpkg_cmake_install(CONFIG Release)
 
 vcpkg_cmake_config_fixup(PACKAGE_NAME "bayesnet")
 

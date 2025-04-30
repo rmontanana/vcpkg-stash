@@ -22,4 +22,5 @@ vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/mytorchlib)
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/tests/lib")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
 configure_file("${CMAKE_CURRENT_LIST_DIR}/usage" "${CURRENT_PACKAGES_DIR}/share/${PORT}/usage" COPYONLY)
+
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")

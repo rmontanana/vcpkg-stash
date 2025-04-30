@@ -1,5 +1,7 @@
 vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 
+set(VCPKG_BUILD_TYPE Release)
+
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO rmontanana/bayesnet_vcpkg
@@ -13,7 +15,6 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
-set(VCPKG_BUILD_TYPE Release)
 set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)
 vcpkg_cmake_install()
 

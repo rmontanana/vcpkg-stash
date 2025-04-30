@@ -1,3 +1,4 @@
+bayesnet provides CMake targets:
 
 find_package(bayesnet CONFIG REQUIRED)
 

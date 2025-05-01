@@ -2,10 +2,11 @@ vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO rmontanana/mdlp
+    REPO rmontanana/bayesnet_vcpkg
     REF "v${VERSION}"
     SHA512 762da4a81c98a07f092fbd01864f39786b70f7cfc9a643329b954e1fb6edca0a068a5f50696e72c2f8a24ead95a0d011406bcaca7ba35b1b01a2f19c18d7154e
     HEAD_REF main
+    GITHUB_HOST https://gitea.rmontanana.es
 )
 
 

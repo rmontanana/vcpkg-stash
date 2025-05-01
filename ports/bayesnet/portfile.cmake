@@ -4,7 +4,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO rmontanana/bayesnet_vcpkg
     REF "v${VERSION}"
-    SHA512 1c68e3c30d6b2a60cab460e678562752bfa2855456c157d878d2af2efce6821c6550645807756838b894209bb3a181e8ad9a441d0aaf877260bbae2954cffffe
+    SHA512 fa06136de97351aa04d58b63975edac37e8de6ea28506168b1d5603943905c8de603427fa24d0b19624addb79aa7dc8f8162f583e44143ee4255fc7731ea8b6b
     HEAD_REF main
     GITHUB_HOST https://gitea.rmontanana.es
 )
@@ -14,11 +14,10 @@ vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
 )
 set(VCPKG_BUILD_TYPE release)
-set(VCPKG_POLICY_MISMATCHED_NUMBER_OF_BINARIES enabled)
+
 vcpkg_cmake_install()
 
-vcpkg_cmake_config_fixup(PACKAGE_NAME "bayesnet")
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/mytorchlib)
+vcpkg_cmake_config_fixup(PACKAGE_NAME "bayesnet" CONFIG_PATH share/bayesnet)
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/tests/lib")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
